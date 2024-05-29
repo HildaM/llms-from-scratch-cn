@@ -163,7 +163,6 @@ vocab.bpe
 # model相关文件
 gpt2/
 # Ignore specific text file
-*.pdf
 *.pth
 .vscode/
 

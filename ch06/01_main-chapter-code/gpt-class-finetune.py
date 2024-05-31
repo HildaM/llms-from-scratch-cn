@@ -275,7 +275,8 @@ if __name__ == "__main__":
 
     download_and_unzip_spam_data(url, zip_path, extracted_path, data_file_path, test_mode=args.test_mode)
     df = pd.read_csv(data_file_path, sep="\t", header=None, names=["Label", "Text"])
-    balanced_df = create_balanced_dataset(df)
+    # balanced_df = create_balanced_dataset(df)
+    balanced_df = df
     balanced_df["Label"] = balanced_df["Label"].map({"ham": 0, "spam": 1})
 
     train_df, validation_df, test_df = random_split(balanced_df, 0.7, 0.1)

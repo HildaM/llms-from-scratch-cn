@@ -182,7 +182,7 @@ if __name__ == "__main__":
             train_loss, val_loss = train_model(
                 model, train_loader, val_loader, optimizer, device,
                 n_epochs=HPARAM_CONFIG["n_epochs"],
-                eval_freq=5, eval_iter=1,
+                eval_freq=5, eval_iter=2,
                 encoded_start_context=encoded_tensor,
                 warmup_iters=HPARAM_CONFIG["warmup_iters"],
                 initial_lr=HPARAM_CONFIG["initial_lr"],
